@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../assets/raleway.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aileron';
+  src: url('../../assets/aileron.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+header {
+  padding: 20px;
+  background-color: rgb(221, 227, 252);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  display: grid;
+  font-size: 3rem;
+}
+
+.logo span {
+  display: block;
+}
+
+.navigation-links {
+  display: flex;
+  gap: 3vw;
+  font-size: 2.5rem;
+  font-family: 'Aileron', 'sans-serif';
+}
+
+a {
+  transition: text-decoration-color 0.3s ease;
+}
+
+.active {
+  color: brown;
+  text-decoration-color: rgb(0, 0, 0, 0);
+}
+
+.secondary-navigation-links {
+  display: flex;
+  gap: 30px;
+}
+
+.secondary-navigation-links img {
+  width: 30px;
+}
+
+.count {
+  position: absolute;
+  left: 17px;
+  top: -6px;
+  padding: 2px 5px;
+  background-color: rgb(221, 126, 126);
+  border-radius: 50%;
+}
+
+.cart {
+  position: relative;
+}
