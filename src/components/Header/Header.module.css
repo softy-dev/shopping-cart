@@ -1,22 +1,6 @@
-@font-face {
-  font-family: 'Raleway';
-  src: url('../../assets/raleway.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Aileron';
-  src: url('../../assets/aileron.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 header {
   padding: 20px;
-  background-color: rgb(221, 227, 252);
+  background-color: var(--header-background);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -25,7 +9,7 @@ header {
 .logo {
   font-family: 'Raleway', sans-serif;
   display: grid;
-  font-size: 3rem;
+  font-size: var(--logo);
 }
 
 .logo span {
@@ -35,7 +19,7 @@ header {
 .navigation-links {
   display: flex;
   gap: 3vw;
-  font-size: 2.5rem;
+  font-size: var(--navigation-links);
   font-family: 'Aileron', 'sans-serif';
 }
 
@@ -44,7 +28,7 @@ a {
 }
 
 .active {
-  color: brown;
+  color: var(--active-header-link);
   text-decoration-color: rgb(0, 0, 0, 0);
 }
 

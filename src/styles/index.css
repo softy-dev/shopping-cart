@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/raleway.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aileron';
+  src: url('../assets/aileron.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --header-background: rgb(221, 227, 252);
+  --active-header-link: rgb(165, 42, 42);
+  --cart-count: rgb(221, 126, 126);
+
+  /* Font-sizes */
+  --logo: 3rem;
+  --navigation-links: 2.5rem;
+}
