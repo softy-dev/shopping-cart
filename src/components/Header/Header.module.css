@@ -1,9 +1,18 @@
 header {
+  /* Colors */
+  --header-background: rgb(221, 227, 252);
+  --active-header-link: rgb(165, 42, 42);
+  --cart-count: rgb(221, 126, 126);
+
+  /* Font-sizes */
+  --logo: 3rem;
+  --navigation-links: 2.5rem;
+
   padding: 20px;
   background-color: var(--header-background);
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .logo {
