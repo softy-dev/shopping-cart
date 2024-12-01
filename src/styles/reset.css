@@ -81,3 +81,8 @@ a:not([class]) {
 a:not(:hover) {
   text-decoration-color: rgb(0, 0, 0, 0);
 }
+
+button {
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,132 @@
+article {
+  /* Colors */
+  --picture-background: rgb(243, 243, 243);
+  --first-pic-theme: rgb(0, 56, 86);
+  --second-pic-theme: rgb(74, 10, 8);
+  --third-pic-theme: rgb(14, 37, 37);
+
+  --first-pic-theme-dark: lab(from var(--first-pic-theme) calc(l/2) a b);
+  --second-pic-theme-dark: lab(from var(--second-pic-theme) calc(l/2) a b);
+  --third-pic-theme-dark: lab(from var(--third-pic-theme) calc(l/2) a b);
+
+  /* Font-sizes */
+  --carousel-heading: 6rem;
+  --carousel-text: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--picture-background);
+  width: 100%;
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  height: max-content;
+}
+
+.img-container {
+  position: relative;
+  height: 600px;
+  width: 400px;
+}
+
+.img-container > img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 100px 50px 100px 50px;
+}
+
+.invisible-img {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: opacity 1s ease-out, visibility 0s 1s, height 0s 1s;
+}
+
+.visible-img {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  transition: opacity 1s ease-out;
+}
+
+.invisible-text {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  left: -500px;
+}
+
+.visible-text {
+  position: relative;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear, left 1s ease;
+  margin-right: 100px;
+}
+
+.text-wrapper {
+  max-width: 700px;
+}
+
+.headline {
+  font-size: var(--carousel-heading);
+  margin-bottom: 10px;
+  color: var(--smooth-dark-font);
+}
+
+.divider {
+  width: 100px;
+  height: 10px;
+  margin-bottom: 40px;
+}
+
+.text-wrapper > p {
+  font-size: var(--carousel-text);
+  color: var(--gray-font);
+  margin-bottom: 20px;
+}
+
+.text-wrapper > button {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.first,
+.second,
+.third {
+  color: var(--light-font);
+}
+
+.first {
+  background-color: var(--first-pic-theme);
+}
+
+.second {
+  background-color: var(--second-pic-theme);
+}
+
+.third {
+  background-color: var(--third-pic-theme);
+}
+
+.first:not(div):hover,
+.first:not(div):active {
+  background-color: var(--first-pic-theme-dark);
+}
+
+.second:not(div):hover,
+.second:not(div):active {
+  background-color: var(--second-pic-theme-dark);
+}
+
+.third:not(div):hover,
+.second:not(div):active {
+  background-color: var(--third-pic-theme-dark);
+}

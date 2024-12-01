@@ -14,13 +14,23 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Lato';
+  src: url('../assets/lato.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Colors */
-  --header-background: rgb(221, 227, 252);
-  --active-header-link: rgb(165, 42, 42);
-  --cart-count: rgb(221, 126, 126);
+  --light-font: rgb(225, 225, 225);
+  --smooth-dark-font: rgb(20, 20, 20);
+  --gray-font: rgb(70, 70, 70);
 
   /* Font-sizes */
-  --logo: 3rem;
-  --navigation-links: 2.5rem;
+}
+
+main {
+  overflow: hidden;
 }

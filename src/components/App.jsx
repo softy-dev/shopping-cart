@@ -1,7 +1,15 @@
 import Header from './Header/Header';
+import Home from './Home/Home';
 
 const App = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <main>
+        <Home />
+      </main>
+    </>
+  );
 };
 
 export default App;
