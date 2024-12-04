@@ -35,7 +35,7 @@ export default function Carousel() {
   });
 
   return (
-    <article>
+    <article className={styles.carousel}>
       {contents.map((item, index) => (
         <div
           className={`${styles['text-wrapper']} ${

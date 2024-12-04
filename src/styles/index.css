@@ -34,3 +34,7 @@
 main {
   overflow: hidden;
 }
+
+h2 {
+  height: max-content;
+}

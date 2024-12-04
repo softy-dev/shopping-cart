@@ -1,4 +1,4 @@
-article {
+.carousel {
   /* Colors */
   --picture-background: rgb(243, 243, 243);
   --first-pic-theme: rgb(0, 56, 86);
@@ -20,10 +20,6 @@ article {
   width: 100%;
   padding: 20px;
   font-family: 'Lato', sans-serif;
-}
-
-h2 {
-  height: max-content;
 }
 
 .img-container {
