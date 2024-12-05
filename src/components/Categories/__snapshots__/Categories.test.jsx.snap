@@ -1,0 +1,58 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Categories component > Matches the snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="_categories_0f9d92"
+  >
+    <h2>
+      SHOP CATEGORIES
+    </h2>
+    <div
+      class="_background_0f9d92"
+    />
+    <nav>
+      <ul
+        class="_categories-wrapper_0f9d92"
+      >
+        <li
+          class="_img-container0_0f9d92"
+        >
+          <a
+            href=""
+          >
+            DRESSES
+          </a>
+        </li>
+        <li
+          class="_img-container1_0f9d92"
+        >
+          <a
+            href=""
+          >
+            TOPS
+          </a>
+        </li>
+        <li
+          class="_img-container2_0f9d92"
+        >
+          <a
+            href=""
+          >
+            PLUS + CURVE
+          </a>
+        </li>
+        <li
+          class="_img-container3_0f9d92"
+        >
+          <a
+            href=""
+          >
+            MEN
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</DocumentFragment>
+`;
