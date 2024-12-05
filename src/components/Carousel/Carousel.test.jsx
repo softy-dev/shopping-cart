@@ -38,7 +38,7 @@ describe('Carousel component', () => {
 
   it('Renders all images with correct sources', () => {
     render(<Carousel />);
-    const images = screen.getAllByRole('img');
+    const images = screen.getAllByRole('presentation');
     expect(images).toHaveLength(3);
     expect(images[0]).toHaveAttribute('src', '/mocked-image.jpg');
     expect(images[1]).toHaveAttribute('src', '/mocked-image2.jpg');

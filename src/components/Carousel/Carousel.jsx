@@ -24,6 +24,10 @@ export default function Carousel() {
     },
   ];
 
+  const theme = styles[`theme${count}`];
+  const divider = `${styles.divider} ${theme}`;
+  const button = `${styles.button} ${theme}`;
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCount((prevCount) => (prevCount + 1) % contents.length);
@@ -38,32 +42,18 @@ export default function Carousel() {
     <article className={styles.carousel}>
       {contents.map((item, index) => (
         <div
-          className={`${styles['text-wrapper']} ${
-            count === index ? styles['visible-text'] : styles['invisible-text']
-          }`}
+          className={count === index ? styles['visible-text'] : styles['invisible-text']}
           key={index}
         >
           <h2 className={`${styles.headline}`}>{item.heading}</h2>
           <div
-            className={`${styles.divider} ${
-              count === 0
-                ? styles.first
-                : count === 1
-                ? styles.second
-                : styles.third
-            }`}
+            className={divider}
           ></div>
           <p>{item.text}</p>
           <button
             type="button"
             name="carousel-btn"
-            className={
-              count === 0
-                ? styles.first
-                : count === 1
-                ? styles.second
-                : styles.third
-            }
+            className={button}
           >
             FIND OUT MORE
           </button>
@@ -77,7 +67,7 @@ export default function Carousel() {
               count === index ? styles['visible-img'] : styles['invisible-img']
             }
             src={item.src}
-            alt="clothing"
+            alt=""
           />
         ))}
       </div>

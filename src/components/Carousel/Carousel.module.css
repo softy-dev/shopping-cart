@@ -1,6 +1,6 @@
 .carousel {
   /* Colors */
-  --picture-background: rgb(243, 243, 243);
+  --background: rgb(226, 226, 226);
   --first-pic-theme: rgb(0, 56, 86);
   --second-pic-theme: rgb(74, 10, 8);
   --third-pic-theme: rgb(14, 37, 37);
@@ -16,10 +16,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--picture-background);
+  background-color: var(--background);
   width: 100%;
   padding: 20px;
   font-family: 'Lato', sans-serif;
+}
+
+.text-wrapper {
+  max-width: 700px;
+  position: relative;
+}
+
+.invisible-text {
+  composes: text-wrapper;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  left: -500px;
+}
+
+.visible-text {
+  composes: text-wrapper;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear, left 1s ease;
+  margin-right: 100px;
 }
 
 .img-container {
@@ -49,32 +72,25 @@
   transition: opacity 1s ease-out;
 }
 
-.invisible-text {
-  position: relative;
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  width: 0;
-  left: -500px;
-}
-
-.visible-text {
-  position: relative;
-  left: 0;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 1s linear, left 1s ease;
-  margin-right: 100px;
-}
-
-.text-wrapper {
-  max-width: 700px;
-}
-
 .headline {
   font-size: var(--carousel-heading);
   margin-bottom: 10px;
   color: var(--smooth-dark-font);
+}
+
+.theme0 {
+  background-color: var(--first-pic-theme);
+  color: var(--light-font);
+}
+
+.theme1 {
+  background-color: var(--second-pic-theme);
+  color: var(--light-font);
+}
+
+.theme2 {
+  background-color: var(--third-pic-theme);
+  color: var(--light-font);
 }
 
 .divider {
@@ -83,46 +99,29 @@
   margin-bottom: 40px;
 }
 
+.button {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.theme0.button:hover,
+.theme0.button:active {
+  background-color: var(--first-pic-theme-dark);
+}
+
+.theme1.button:hover,
+.theme1.button:active {
+  background-color: var(--second-pic-theme-dark);
+}
+
+.theme2.button:hover,
+.theme2.button:active {
+  background-color: var(--third-pic-theme-dark);
+}
+
 .text-wrapper > p {
   font-size: var(--carousel-text);
   color: var(--gray-font);
   margin-bottom: 20px;
 }
 
-.text-wrapper > button {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-.first,
-.second,
-.third {
-  color: var(--light-font);
-}
-
-.first {
-  background-color: var(--first-pic-theme);
-}
-
-.second {
-  background-color: var(--second-pic-theme);
-}
-
-.third {
-  background-color: var(--third-pic-theme);
-}
-
-.first:not(div):hover,
-.first:not(div):active {
-  background-color: var(--first-pic-theme-dark);
-}
-
-.second:not(div):hover,
-.second:not(div):active {
-  background-color: var(--second-pic-theme-dark);
-}
-
-.third:not(div):hover,
-.second:not(div):active {
-  background-color: var(--third-pic-theme-dark);
-}
