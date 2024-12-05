@@ -3,9 +3,10 @@ header {
   --header-background: rgb(221, 227, 252);
   --active-header-link: rgb(165, 42, 42);
   --cart-count: rgb(221, 126, 126);
+  --header-link: rgb(67, 67, 67);
 
   /* Font-sizes */
-  --logo: 3rem;
+  --logo: 2.6rem;
   --navigation-links: 2.5rem;
 
   padding: 20px;
@@ -30,6 +31,8 @@ header {
   gap: 3vw;
   font-size: var(--navigation-links);
   font-family: 'Aileron', 'sans-serif';
+  font-weight: bold;
+  color: var(--header-link);
 }
 
 a {
