@@ -5,13 +5,13 @@ export default function Categories() {
 
   return (
     <section className={styles.categories}>
-      <h2>SHOP CATEGORIES</h2>
+      <h2 className={styles.heading}>SHOP CATEGORIES</h2>
       <div className={styles.background}></div>
       <nav>
-        <ul className={styles["categories-wrapper"]}>
+        <ul className={styles['categories-list']}>
           {categories.map((item, i) => {
             return (
-            <li key={i} className={styles[`img-container${i}`]}>
+            <li key={i} className={styles[`category${i}`]}>
               <a href="">{item}</a>
             </li>
             )

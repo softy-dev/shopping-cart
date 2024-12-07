@@ -49,7 +49,7 @@ export default function Carousel() {
           <div
             className={divider}
           ></div>
-          <p>{item.text}</p>
+          <p className={styles.text}>{item.text}</p>
           <button
             type="button"
             name="carousel-btn"

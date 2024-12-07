@@ -3,26 +3,26 @@
   justify-items: center;
   gap: 30px;
   position: relative;
-  margin-bottom: 30px;
-  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-top: 100px;
 
   /* Font-sizes */
   --heading: 3.2rem;
   --categories: 2.3rem;
 }
 
-.categories-wrapper {
+.categories-list {
   display: flex;
   gap: 50px;
 }
 
-.categories > h2 {
+.heading {
   font-family: 'Aileron', sans-serif;
   color: var(--smooth-dark-font);
   font-size: var(--heading);
 }
 
-.img-container {
+.category {
   composes: img-container from "../Carousel/Carousel.module.css";
   height: 500px;
   width: 350px;
@@ -36,33 +36,34 @@
   font-size: var(--categories);
   pointer-events: none;
   transition: filter 0.5s ease;
+  z-index: auto;
 }
 
-.img-container:hover {
+.category:hover {
   filter: brightness(75%);
 }
 
-.img-container0 {
-  composes: img-container;
+.category0 {
+  composes: category;
   background: center / cover no-repeat url(../../assets/dresses.jpg);
 }
 
-.img-container1 {
-  composes: img-container;
+.category1 {
+  composes: category;
   background: center / cover no-repeat url(../../assets/tops.jpg);
 }
 
-.img-container2 {
-  composes: img-container;
+.category2 {
+  composes: category;
   background: center / cover no-repeat url(../../assets/curve.jpg);
 }
 
-.img-container3 {
-  composes: img-container;
+.category3 {
+  composes: category;
   background: center / cover no-repeat url(../../assets/men.jpg);
 }
 
-.img-container > a {
+.category > a {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.734);
   text-align: center;

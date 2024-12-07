@@ -18,7 +18,7 @@
   align-items: center;
   background: linear-gradient(to bottom, white, var(--background));
   width: 100%;
-  padding: 20px;
+  padding: 40px 20px;
   font-family: 'Lato', sans-serif;
 }
 
@@ -51,7 +51,7 @@
   width: 400px;
 }
 
-.img-container > img {
+.img {
   position: absolute;
   width: 100%;
   object-fit: cover;
@@ -59,6 +59,7 @@
 }
 
 .invisible-img {
+  composes: img;
   visibility: hidden;
   opacity: 0;
   height: 0;
@@ -66,6 +67,7 @@
 }
 
 .visible-img {
+  composes: img;
   visibility: visible;
   opacity: 1;
   height: 100%;
@@ -119,7 +121,7 @@
   background-color: var(--third-pic-theme-dark);
 }
 
-.text-wrapper > p {
+.text {
   font-size: var(--carousel-text);
   color: var(--gray-font);
   margin-bottom: 20px;
