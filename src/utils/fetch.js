@@ -1,5 +1,5 @@
-const getData = async function getDataFromAPI(department) {
-  const url = `https://apidojo-forever21-v1.p.rapidapi.com/products/search?query=dress&rows=60&start=0&brand=${department}`;
+const fetchData = async function fetchDataFromAPI(department, number) {
+  const url = `https://apidojo-forever21-v1.p.rapidapi.com/products/v2/list?pageSize=${number}&pageNumber=1&category=${department}`;
   const options = {
     method: 'GET',
     headers: {
@@ -10,7 +10,25 @@ const getData = async function getDataFromAPI(department) {
 
   const response = await fetch(url, options);
   const result = await response.json();
-  return result.response.docs;
+  const products = result.CatalogProducts;
+  console.log(products);
+  const filteredProducts = products.map((item) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(item.Description, 'text/html');
+    const descriptionContents = [...doc.querySelectorAll('div.d_content')].map(div => div.textContent.trim());
+    const description = descriptionContents[0].slice(0, descriptionContents[0].indexOf('.') + 1);
+
+    const newObj = {
+      name: item.DisplayName,
+      description: description,
+      image: item.DefaultProductImage,
+      price: `$${item.OriginalPrice}`,
+    }
+    
+    return newObj;
+  })
+
+  return filteredProducts;
 };
 
-export default getData;
+export default fetchData;
