@@ -23,7 +23,7 @@
 }
 
 .category {
-  composes: img-container from "../Carousel/Carousel.module.css";
+  position: relative;
   height: 500px;
   width: 350px;
   margin-bottom: 30px;
