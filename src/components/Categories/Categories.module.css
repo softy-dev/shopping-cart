@@ -45,22 +45,22 @@
 
 .category0 {
   composes: category;
-  background: center / cover no-repeat url(../../assets/dresses.jpg);
+  background: center / cover no-repeat url('src/assets/dresses.jpg');
 }
 
 .category1 {
   composes: category;
-  background: center / cover no-repeat url(../../assets/tops.jpg);
+  background: center / cover no-repeat url('src/assets/tops.jpg');
 }
 
 .category2 {
   composes: category;
-  background: center / cover no-repeat url(../../assets/curve.jpg);
+  background: center / cover no-repeat url('src/assets/curve.jpg');
 }
 
 .category3 {
   composes: category;
-  background: center / cover no-repeat url(../../assets/men.jpg);
+  background: center / cover no-repeat url('src/assets/men.jpg');
 }
 
 .category > a {
