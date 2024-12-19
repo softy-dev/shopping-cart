@@ -1,0 +1,49 @@
+.trending {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+
+  --heading: 3.2rem;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: max-content;
+  gap: 50px;
+}
+
+.product {
+  width: max-content;
+  display: grid;
+  justify-items: flex-start;
+  gap: 10px;
+}
+
+.product > h2 {
+  grid-row: 2 / 3;
+}
+
+.img-container {
+  height: 500px;
+  width: 350px;
+  grid-row: 1 / 2;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heading {
+  composes: heading from '../Categories/Categories.module.css';
+}
+
+.price {
+  font-weight: bold;
+}
+
+.product-title {
+  font-weight: normal;
+}
