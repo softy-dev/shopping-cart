@@ -25,7 +25,14 @@ export default function Carousel() {
               <div className={styles['img-container']}>
                 <img className={styles['img']} src={item.image}></img>
               </div>
-              <p className={styles.price}>{item.price}</p>
+              <div className={styles['number-wrapper']}>
+                <p className={styles.price}>{item.price}</p>
+                <div>
+                  <input type='number' className={styles['number-input']}></input>
+                  <button type='button' className={styles['cart-btn']}>Add to cart</button>
+                </div>
+              </div>
+              
             </li>
           )
         })}

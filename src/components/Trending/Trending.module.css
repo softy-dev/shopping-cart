@@ -47,3 +47,24 @@
 .product-title {
   font-weight: normal;
 }
+
+.number-wrapper {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.number-input {
+  width: 50px;
+}
+
+.cart-btn {
+  font-weight: bold;
+  color: var(--smooth-dark-font);
+  background-color: rgb(255, 119, 70);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 5px;
+}
