@@ -4,10 +4,10 @@ import Trending from '../../components/Trending/Trending';
 
 export default function Home() {
   return (
-  <>
-  <Carousel />
-  <Categories />
-  <Trending />
-  </>
-);
+    <>
+      <Carousel />
+      <Categories />
+      <Trending />
+    </>
+  );
 }

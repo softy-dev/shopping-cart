@@ -1,0 +1,17 @@
+import { useEffect, useState } from 'react';
+import fetchData from '../utils/fetch';
+
+export default function useProducts() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchData();
+      setProducts(data);
+    };
+
+    getData();
+  }, []);
+
+  return products;
+}
